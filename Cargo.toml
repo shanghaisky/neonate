@@ -1,0 +1,25 @@
+[package]
+name = "neonate"
+version = "0.1.0"
+edition = "2021"
+description = "Neonate — from-scratch reinforcement learning in Rust: autograd engine, DQN agent, game environments. Zero dependencies."
+license = "MIT"
+repository = "https://github.com/example/neonate"
+keywords = ["reinforcement-learning", "autograd", "dqn", "machine-learning"]
+categories = ["science"]
+
+[lib]
+name = "neonate"
+path = "src/lib.rs"
+
+[[bin]]
+name = "train"
+path = "src/bin/train.rs"
+
+[[bin]]
+name = "play"
+path = "src/bin/play.rs"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
